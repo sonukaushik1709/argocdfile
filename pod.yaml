@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sonu
+  labels:
+    name : raja
+spec:
+  containers:
+    - name: sonu-container
+      image: nginx:latest
+      ports:
+        - containerPort: 80

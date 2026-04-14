@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sonu-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name : sonu
+  template:
+    metadata:
+      labels:
+        name : sonu
+    spec:
+      containers:
+        - name: sonu-container
+          image: nginx:latest
+          ports:
+            - containerPort: 80
